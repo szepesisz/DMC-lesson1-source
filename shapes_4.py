@@ -12,6 +12,15 @@ class Length(float):
         self.visible = True
 
 
+class Side(Length):
+    pass
+
+
+class Polygon:
+    def perimeter(self):
+        return sum([s for s in dir(self) if isinstance(s, Side)])
+
+
 class Shape:
     # De mi van ha pl hosszakkal és szögekkel akarom megadni?
     # def __init__(self, *a, **kw):
